@@ -1,0 +1,24 @@
+#! /bin/bash
+
+############################################################
+# Install composer
+# A package manager for PHP
+# See: https://getcomposer.org/
+############################################################
+# Requires: brew.sh, php.sh
+
+echo "--------------------------------------
+    Starting Composer installation
+--------------------------------------"
+
+# TODO: Will the following SHA remain the same across composer versions?
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('SHA384', 'composer-setup.php') === '92102166af5abdb03f49ce52a40591073a7b859a86e8ff13338cf7db58a19f7844fbc0bb79b2773bf30791e935dbd938') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+
+
+# Install global dependancies
+composer global require squizlabs/php_codesniffer deployer/deployer psy/psysh hirak/prestissimo
+
+echo "Done."
