@@ -14,10 +14,10 @@ if [ X"${KERNEL_NAME}" == X'DARWIN' ]; then
 
 # Detect distro name and release version.
 elif [ X"${KERNEL_NAME}" == X'LINUX' ]; then
-    elif [ -f /etc/fedora-release ]; then
+    if [ -f /etc/fedora-release ]; then
         # Fedora
         export DISTRO='FEDORA'
-    if [ -f /etc/redhat-release ]; then
+    elif [ -f /etc/redhat-release ]; then
         # RHEL/CentOS
         export DISTRO='RHEL'
     elif [ -f /etc/lsb-release && grep -i 'DISTRIB_ID=Ubuntu' /etc/lsb-release &>/dev/null ]; then

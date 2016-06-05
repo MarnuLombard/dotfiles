@@ -25,6 +25,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 export FISH_EXPORT="$HOME/.fish_export"
 touch $FISH_EXPORT
 
+# Run Bash instead of sh
+alias sh='/bin/bash'
 
 # Run the scripts
 sh "./install/dotfiles.sh"
