@@ -1,0 +1,17 @@
+/vendor
+/bin
+/node_modules
+#/resources/assets/*
+
+.env
+.env.*
+!.env.example
+
+.DS_Store
+Thumbs.db
+
+.idea/
+_ide_helper.php
+storage/debugbar
+
+*.sql

@@ -1,0 +1,10 @@
+[user]
+	name = Marnu
+	email = marnu@lombard
+[core]
+	autocrlf = input
+	excludesfile = /Users/marnu/.gitignore_global
+[push]
+	default = matching
+[alias]
+	unstage = reset --
