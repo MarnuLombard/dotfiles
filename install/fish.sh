@@ -23,7 +23,7 @@ elif [ X"${DISTRO}" == X'FEDORA' ]; then
   # See: https://github.com/ValveSoftware/steam-for-linux/issues/2005#issuecomment-14521331
   . /etc/os-release
 
-  curl "http://download.opensuse.org/repositories/shells:fish:release:2/Fedora_$VERSION_ID/shells:fish:release:2.repo" -o /etc/yum.repos.d/fish.repo
+  sudo curl "http://download.opensuse.org/repositories/shells:fish:release:2/Fedora_$VERSION_ID/shells:fish:release:2.repo" -o /etc/yum.repos.d/fish.repo
   sudo dnf install -y fish
 
 fi
