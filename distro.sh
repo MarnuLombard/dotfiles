@@ -26,6 +26,7 @@ elif [ X"${KERNEL_NAME}" == X'LINUX' ]; then
     elif [ -f /etc/debian_version ]; then
         # Debian
         export DISTRO='DEBIAN'
+    fi
 
 elif [ X"${KERNEL_NAME}" == X'FREEBSD' ]; then
     export DISTRO='FREEBSD'
