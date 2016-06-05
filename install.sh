@@ -18,7 +18,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Export var containing name of current distro
 # We will now have $KERNEL_NAME & $DISTRO
 # Source: https://bitbucket.org/zhb/iredmail/src/cfbb33763194e0235f82375ff70bba39b5ca998c/iRedMail/conf/global
-sh "./distro.sh"
+. ./distro.sh
 
 # Let's create an exports file, that though it's not directly loaded,
 # Will be symlinked to a file that's autoloaded by fish or a plugin
