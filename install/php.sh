@@ -32,17 +32,17 @@ elif [ X"${KERNEL_NAME}" == X'LINUX' ]; then
     sudo dnf install -y community-mysql-common community-mysql-devel community-mysql-libs
 
     ## fetch php7 source
-    mkdir -p /usr/src/php7
+    sudo mkdir -p /usr/src/php7
     cd /usr/src/php7
-    git clone https://github.com/php/php-src.git
+    sudo git clone https://github.com/php/php-src.git
 
     cd /usr/src/php7/php-src/
+
     ## prepare php7 sources
-    ./buildconf
+    sudo ./buildconf
 
     ## configure php7
-
-    ./configure --with-config-file-path=/etc/php7/ \
+    sudo ./configure --with-config-file-path=/etc/php7/ \
     --enable-mbstring \
     --enable-zip \
     --enable-bcmath \
@@ -76,8 +76,8 @@ elif [ X"${KERNEL_NAME}" == X'LINUX' ]; then
     --with-recode=/usr \
     --with-mysqli=/usr/bin/mysql_config
 
-    make -j2
-    make install
+    sudo make -j2
+    sudo make install
 
     sudo mkdir -p /etc/php7
     sudo cp /usr/src/php7/php-src/php.ini-development /etc/php7/.
