@@ -1,16 +1,8 @@
 """""""""""""""
-" NerdTree 
-"""""""""""""""
-autocmd vimenter * NERDTree
-let NERDTreeShowHidden=1
-
-
-"""""""""""""""
 " Vim-plug
 """""""""""""""
 "let g:plug_url_format = 'git@github.com:%s.git'
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree'
 Plug 'junegunn/vim-easy-align'
 call plug#end()
 
@@ -29,3 +21,12 @@ set number "Show line numbers
 """""""""""""""""""""""
 syntax enable
 set background=dark
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+colorscheme solarized
+
+""""""""""""""""""""""""
+" NerdTree
+"""""""""""""""""""""""
+"autocmd vimenter * NERDTree
+
